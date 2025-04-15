@@ -1,0 +1,186 @@
+/* Base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Trebuchet MS', Arial, sans-serif;
+  }
+  
+  body {
+    background-color: #fff5f5;
+    color: #5c3836;
+    line-height: 1.6;
+  }
+  
+  /* Header & Navigation */
+  header {
+    background-color: #ff9eb1;
+    padding: 1rem 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+  
+  nav {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    padding: 0 2rem;
+  }
+  
+  .tab {
+    background-color: transparent;
+    border: none;
+    color: #5c3836;
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 0.7rem 1.5rem;
+    margin: 0 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-radius: 25px;
+  }
+  
+  .tab:hover {
+    background-color: #ffd0d9;
+    transform: translateY(-3px);
+  }
+  
+  .tab:active {
+    transform: translateY(0);
+  }
+  
+  /* Content area */
+  #content {
+    max-width: 1000px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  }
+  
+  /* Home page */
+  .home h1 {
+    font-size: 3rem;
+    text-align: center;
+    color: #e05f7c;
+    margin-bottom: 2rem;
+  }
+  
+  .description {
+    text-align: center;
+    font-size: 1.2rem;
+    margin-bottom: 2.5rem;
+    padding: 0 1.5rem;
+  }
+  
+  .hours, .location {
+    background-color: #fff9f9;
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+    border-left: 4px solid #ffb6c1;
+  }
+  
+  .hours h2, .location h2 {
+    color: #e05f7c;
+    margin-bottom: 1rem;
+  }
+  
+  .hours ul {
+    list-style-type: none;
+  }
+  
+  .hours li, .location p {
+    margin: 0.5rem 0;
+  }
+  
+  /* Menu page */
+  .menu h1 {
+    font-size: 3rem;
+    text-align: center;
+    color: #e05f7c;
+    margin-bottom: 2rem;
+  }
+  
+  .menu-items {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+  }
+  
+  .menu-item {
+    background-color: #fff9f9;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.03);
+    transition: transform 0.3s ease;
+  }
+  
+  .menu-item:hover {
+    transform: translateY(-5px);
+  }
+  
+  .menu-item h2 {
+    color: #e05f7c;
+    margin-bottom: 0.8rem;
+    font-size: 1.4rem;
+  }
+  
+  .menu-item p:last-child {
+    font-weight: bold;
+    margin-top: 1rem;
+    color: #e05f7c;
+    font-size: 1.2rem;
+  }
+  
+  /* Contact page */
+  .contact h1 {
+    font-size: 3rem;
+    text-align: center;
+    color: #e05f7c;
+    margin-bottom: 2rem;
+  }
+  
+  .contact-info {
+    max-width: 500px;
+    margin: 0 auto;
+    background-color: #fff9f9;
+    padding: 2rem;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.03);
+  }
+  
+  .contact-info h2 {
+    color: #e05f7c;
+    margin-bottom: 1rem;
+  }
+  
+  .contact-info p {
+    margin: 0.7rem 0;
+    font-size: 1.1rem;
+  }
+  
+  /* Responsive design */
+  @media (max-width: 768px) {
+    .menu-items {
+      grid-template-columns: 1fr;
+    }
+    
+    nav {
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    .tab {
+      margin: 0.5rem 0;
+    }
+    
+    .home h1, .menu h1, .contact h1 {
+      font-size: 2.5rem;
+    }
+  }
